@@ -392,6 +392,8 @@ public final class NDEFRecord {
 }
 
 public protocol NFCTagImpl {
+    //func readMessage() async throws -> NDEFMessage
+    //func writeMessage(_ message: NDEFMessage) async throws
 }
 
 /// Provides access to NFC-V (ISO 15693) properties and I/O operations on a Tag.
@@ -411,6 +413,26 @@ public final class NFCVTag: NFCTagImpl {
 
     init(platformValue: PlatformValue) {
         self.platformValue = platformValue
+    }
+
+    public func readMessage() async throws -> NDEFMessage {
+        #if SKIP
+        fatalError("TODO")
+        #elseif canImport(CoreNFC)
+        try await NDEFMessage(platformValue: platformValue.readNDEF())
+        #else
+        fatalError("not implemented")
+        #endif
+    }
+
+    public func writeMessage(_ message: NDEFMessage) async throws {
+        #if SKIP
+        fatalError("TODO")
+        #elseif canImport(CoreNFC)
+        try await platformValue.writeNDEF(message.platformValue)
+        #else
+        fatalError("not implemented")
+        #endif
     }
 }
 
@@ -432,6 +454,26 @@ public final class NFCFTag: NFCTagImpl {
     init(platformValue: PlatformValue) {
         self.platformValue = platformValue
     }
+
+    public func readMessage() async throws -> NDEFMessage {
+        #if SKIP
+        fatalError("TODO")
+        #elseif canImport(CoreNFC)
+        try await NDEFMessage(platformValue: platformValue.readNDEF())
+        #else
+        fatalError("not implemented")
+        #endif
+    }
+
+    public func writeMessage(_ message: NDEFMessage) async throws {
+        #if SKIP
+        fatalError("TODO")
+        #elseif canImport(CoreNFC)
+        try await platformValue.writeNDEF(message.platformValue)
+        #else
+        fatalError("not implemented")
+        #endif
+    }
 }
 
 
@@ -452,6 +494,26 @@ public final class NFCMTag: NFCTagImpl {
 
     init(platformValue: PlatformValue) {
         self.platformValue = platformValue
+    }
+
+    public func readMessage() async throws -> NDEFMessage {
+        #if SKIP
+        fatalError("TODO")
+        #elseif canImport(CoreNFC)
+        try await NDEFMessage(platformValue: platformValue.readNDEF())
+        #else
+        fatalError("not implemented")
+        #endif
+    }
+
+    public func writeMessage(_ message: NDEFMessage) async throws {
+        #if SKIP
+        fatalError("TODO")
+        #elseif canImport(CoreNFC)
+        try await platformValue.writeNDEF(message.platformValue)
+        #else
+        fatalError("not implemented")
+        #endif
     }
 }
 #endif
