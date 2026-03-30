@@ -59,31 +59,31 @@
         }
       }
     },
-    "Hello [%@](https://skip.tools)!" : {
+    "Hello [%@](https://skip.dev)!" : {
       "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¡Hola [%@](https://skip.tools)!"
+            "value" : "¡Hola [%@](https://skip.dev)!"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bonjour [%@](https://skip.tools)!"
+            "value" : "Bonjour [%@](https://skip.dev)!"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "こんにちは、[%@](https://skip.tools)!"
+            "value" : "こんにちは、[%@](https://skip.dev)!"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你好，[%@](https://skip.tools)!"
+            "value" : "你好，[%@](https://skip.dev)!"
           }
         }
       }
